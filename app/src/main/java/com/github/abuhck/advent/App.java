@@ -6,6 +6,7 @@ package com.github.abuhck.advent;
 public class App {
 
     public static void main(String[] args) {
-        new Day1();
+//        new Day1();
+        new Day2();
     }
 }
