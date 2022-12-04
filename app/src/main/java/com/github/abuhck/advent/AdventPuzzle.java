@@ -44,6 +44,8 @@ public abstract class AdventPuzzle {
         lap(String.valueOf(answer));
     }
 
+    public void lap(int answer) { lap(String.valueOf(answer)); }
+
     public void lap (String answer) {
         long timeSpent = (System.nanoTime() - timerStart) / 1000;
         System.out.println("Part " + part + ": " + answer + ", Duration: " + timeToString(timeSpent));
@@ -60,6 +62,14 @@ public abstract class AdventPuzzle {
     public List<Integer> convertToInts(List<String> input) {
         List<Integer> ints = new ArrayList<>();
         for (String s: input) ints.add(Integer.parseInt(s));
+        return ints;
+    }
+
+    public int[] convertToInts(String[] input) {
+        int[] ints = new int[input.length];
+        for(int i = 0; i < input.length; i++) {
+            ints[i] = Integer.parseInt(input[i]);
+        }
         return ints;
     }
 
